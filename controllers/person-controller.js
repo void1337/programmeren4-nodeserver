@@ -43,10 +43,11 @@ module.exports = {
     deletePersonById(req, res, next){
         console.log('delete was called')
 
-        assert(req.params.id, 'param is required')
-        assert(!isNaN(req.params.id), 'param is NaN' )
-
         const id = req.params.id
+
+        assert(id, 'param is required')
+        assert(!isNaN(id) && id >= 0 && id < personlist.length, 'param is NaN' )
+
 
 
 
