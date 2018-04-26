@@ -49,9 +49,9 @@ module.exports = {
             }
             next(error)
         }
-    
 
         //retourneer statusmessage
+        res.status(200).end()
 
     }
     
