@@ -3,15 +3,18 @@
 //
 
 const express = require('express')
+const Person = require('../domain/Person')
 let routes = express.Router()
 
-routes.get('/api/person', (req, res, next) => {
+let personlist = []
+
+routes.get('/person', (req, res, next) => {
 	console.log('get was called')
 
 	res.status(200).json(personlist).end()
 })
 
-routes.get('/api/person/:id', (req, res, next) => {
+routes.get('/person/:id', (req, res, next) => {
 	console.log('get was called')
 	const id = req.params.id
 
@@ -27,7 +30,7 @@ routes.get('/api/person/:id', (req, res, next) => {
 	}
 })
 
-routes.post('/api/person', (req, res, next) => {
+routes.post('/person', (req, res, next) => {
 	console.log('post was called')
 	console.log(req.body)
 

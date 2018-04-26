@@ -22,7 +22,7 @@ app.use('*', (req, res, next) => {
 	next()
 })
 
-app.use('/', routes)
+app.use('/api', routes)
 
 
 // Wanneer de gevraagde endpoint niet gevonden is komen we hier.
