@@ -5,13 +5,13 @@
 const express = require('express')
 let routes = express.Router()
 
-app.get('/api/person', (req, res, next) => {
+routes.get('/api/person', (req, res, next) => {
 	console.log('get was called')
 
 	res.status(200).json(personlist).end()
 })
 
-app.get('/api/person/:id', (req, res, next) => {
+routes.get('/api/person/:id', (req, res, next) => {
 	console.log('get was called')
 	const id = req.params.id
 
@@ -27,7 +27,7 @@ app.get('/api/person/:id', (req, res, next) => {
 	}
 })
 
-app.post('/api/person', (req, res, next) => {
+routes.post('/api/person', (req, res, next) => {
 	console.log('post was called')
 	console.log(req.body)
 
