@@ -5,6 +5,7 @@ const express = require('express')
 const morgan = require('morgan')
 const Person = require('./domain/Person')
 const bodyparser = require('body-parser')
+const routes = require('./routes/person-routes')
 
 const app = express()
 const port = process.env.PORT || 3000

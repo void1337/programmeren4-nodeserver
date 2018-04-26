@@ -2,6 +2,9 @@
 //Person routes
 //
 
+const express = require('express')
+let routes = express.Router()
+
 app.get('/api/person', (req, res, next) => {
 	console.log('get was called')
 
@@ -35,3 +38,5 @@ app.post('/api/person', (req, res, next) => {
 
 	res.status(200).json(person).end()
 })
+
+module.exports = routes
